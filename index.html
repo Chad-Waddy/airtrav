@@ -1,140 +1,208 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aitrav - Trip Checklist</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
-
-
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.38.0/dist/full.css" rel="stylesheet">
+    <style>
+        /* Custom styling for progress bar */
+        .progress-bar {
+            width: 40%; /* Adjust based on progress */
+        }
+    </style>
 </head>
+<body class="font-sans">
 
-<body>
-
-<!-- this is the top and first nav -->
-    <div>
-        <div>
-            <div class="navbar bg-base-100 flex-1">
-                <div class="flex-1">
-                  <a class="btn btn-ghost text-xl">daisyUI</a>
+    <!-- Navbar -->
+    <nav class="bg-white border-b border-gray-200 py-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <span class="font-bold text-xl text-blue-600">Aitrav</span>
+                <div class="space-x-8">
+                    <a href="#" class="hover:text-blue-600">Things To Do</a>
+                    <a href="#" class="hover:text-blue-600">Tour</a>
+                    <a href="#" class="hover:text-blue-600">Blog</a>
                 </div>
-                <div class="flex-none center">
-                    <button class="btn">Button</button> <!-- nee to be centered -->
-                    <button class="btn">Button</button><!-- nee to be centered -->
-                    <button class="btn">Button</button><!-- nee to be centered -->
-                    <button class="btn">Button</button><!-- nee to be centered -->
-                  <div class="dropdown dropdown-end">
-                    <br>
-                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
-                      <div class="indicator">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="h-5 w-5"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor">
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-                        </svg>
-                        <span class="badge badge-sm indicator-item">8</span>
-                      </div>
-                      <br>
-                    </div>
-                    <div
-                      tabindex="0"
-                      class="card card-compact dropdown-content bg-base-100 z-[1] mt-3 w-52 shadow">
-                      <div class="card-body">
-                        <span class="text-lg font-bold">8 Items</span>
-                        <span class="text-info">Subtotal: $999</span>
-                        <div class="card-actions">
-                          <button class="btn btn-primary btn-block">View cart</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <br>
-                  <div class="dropdown dropdown-end">
-                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
-                      <div class="w-10 rounded-full">
-                        <img
-                          alt="Tailwind CSS Navbar component"
-                          src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" /><!-- photo pic -->
-                      </div>
-                    </div>
-                    <ul
-                      tabindex="0"
-                      class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                      <li>
-                        <a class="justify-between">
-                          Profile
-                          <span class="badge">New</span>
-                        </a>
-                      </li>
-                      <li><a>Settings</a></li>
-                      <li><a>Logout</a></li>
+            </div>
+            <div class="flex space-x-6 items-center">
+                <a href="#" class="text-gray-700">USD</a>
+                <a href="#" class="text-gray-700">FAQ</a>
+                <a href="#" class="text-gray-700">Login</a>
+            </div>
+        </div>
+    </nav>
+    
+
+    <!-- Main Content -->
+    <div class="container mx-auto py-10">
+         <!-- Progress Bar -->
+         <div class="mb-4">
+            <div class="bg-gray-200 h-1 rounded-full">
+                <div class="bg-blue-600 h-1 rounded-full progress-bar"></div>
+            </div>
+            <p class="text-gray-600 mt-2 text-sm">40% completed</p>
+        </div>
+        <!-- Trip Checklist Sidebar + Checklist Main Content -->
+        <div class="grid grid-cols-5 gap-8">
+            <!-- Sidebar -->
+            <div class="col-span-1">
+                <div class="bg-gray-50 p-4 rounded-lg shadow">
+                    <h3 class="font-semibold text-lg">Trip Checklist</h3>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="#" class="text-blue-500">Travel (2)</a></li>
+                        <li><a href="#" class="text-gray-700">Tickets & Tours (2)</a></li>
+                        <li><a href="#" class="text-gray-700">Hotel (1)</a></li>
+                        <li><a href="#" class="text-gray-700">Plan Ahead (4)</a></li>
                     </ul>
-                  </div>
-
-
                 </div>
-              </div>
+            </div>
 
+            <!-- Main Checklist Content -->
+            <div class="col-span-4">
+                <div class="bg-white p-8 rounded-lg shadow">
+                    <!-- Progress Bar -->
+                    <div class="mb-4">
+                        <div class="bg-gray-200 h-1 rounded-full">
+                            <div class="bg-blue-600 h-1 rounded-full progress-bar"></div>
+                        </div>
+                        <p class="text-gray-600 mt-2 text-sm">40% completed</p>
+                    </div>
 
+                    <!-- Travel Section -->
+                    <div class="mb-6">
+                        <h3 class="font-semibold text-lg mb-2">Travel (2)</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <!-- Trip Card 1 -->
+                            <div class="border rounded-lg p-4 flex justify-between items-center">
+                                <div>
+                                    <p class="font-semibold">Dhaka City</p>
+                                    <p class="text-gray-500">Bangkok</p>
+                                </div>
+                                <button class="btn btn-primary">Check Prices</button>
+                            </div>
+                            <!-- Trip Card 2 -->
+                            <div class="border rounded-lg p-4 flex justify-between items-center">
+                                <div>
+                                    <p class="font-semibold">Paris</p>
+                                    <p class="text-gray-500">Bangkok</p>
+                                </div>
+                                <button class="btn btn-primary">Check Prices</button>
+                            </div>
+                        </div>
+                    </div>
 
-        </div>
+                    <!-- Tickets & Tours Section -->
+                    <div class="mb-6">
+                        <h3 class="font-semibold text-lg mb-2">Tickets & Tours (2)</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <!-- Tour Card 1 -->
+                            <div class="border rounded-lg p-4 flex justify-between items-center">
+                                <div>
+                                    <p class="font-semibold">Spas - Bangkok</p>
+                                    <p class="text-gray-500">Wed 12/13</p>
+                                </div>
+                                <button class="btn btn-secondary">Buy Tickets</button>
+                            </div>
+                            <!-- Tour Card 2 -->
+                            <div class="border rounded-lg p-4 flex justify-between items-center">
+                                <div>
+                                    <p class="font-semibold">Sea Life Bangkok</p>
+                                    <p class="text-gray-500">Wed 12/13</p>
+                                </div>
+                                <button class="btn btn-secondary">Buy Tickets</button>
+                            </div>
+                        </div>
+                    </div>
 
-         <div class="">  
-        <div class="flex justify-center">
-            <!-- this is the start for the trip checklist-->
-            <div class="dropdown ">
-                <div tabindex="0" role="button" class="btn m-1">Click</div>
-                <div
-                  tabindex="0"
-                  class="dropdown-content card card-compact bg-primary text-primary-content z-[1] w-64 p-2 shadow">
-                  <div class="card-body">
-                    <h3 class="card-title">Card title!</h3>
-                    <p>you can use any element as a dropdown.</p>
-                  </div>
-                 
-                
-              </div>
-            </div class=""><!--the buttin section -->
-               
-            <button class="btn">Button</button>
-            <button class="btn btn-neutral">Neutral</button>
+                    <!-- Hotel Section -->
+                    <div class="mb-6">
+                        <h3 class="font-semibold text-lg mb-2">Hotel (1)</h3>
+                        <div class="border rounded-lg p-4 flex justify-between items-center">
+                            <div>
+                                <p class="font-semibold">Bangkok</p>
+                                <p class="text-gray-500">Tue 10/24 - Fri 10/31</p>
+                            </div>
+                            <button class="btn btn-primary">Check Prices</button>
+                        </div>
+                    </div>
 
-        </div>
-        <br>
-            <br>
-        <button class="btn btn-block shadow">block</button>
-        <br>
-        <br>
-      <div tabindex="0" class="collapse collapse-plus border-base-300 bg-base-200 border">
-          <div class="collapse-title text-xl font-medium">Focus me to see content</div>
-          <div class="collapse-content">
-            <p>tabindex="0" attribute is necessary to make the div focusable</p>
-          </div>
+                    <!-- Plan Ahead Section -->
+                    <div class="mb-6">
+                        <h3 class="font-semibold text-lg mb-2">Plan Ahead (4)</h3>
+                        <div class="space-y-4">
+                            <!-- Visa Requirement 1 -->
+                            <div class="border rounded-lg p-4 flex justify-between items-center">
+                                <div>
+                                    <p class="font-semibold">Check visa requirements</p>
+                                </div>
+                                <button class="btn btn-outline btn-warning">Check Visa</button>
+                            </div>
+                            <!-- Visa Requirement 2 -->
+                            <div class="border rounded-lg p-4 flex justify-between items-center">
+                                <div>
+                                    <p class="font-semibold">Check visa requirements</p>
+                                </div>
+                                <button class="btn btn-outline btn-warning">Check Visa</button>
+                            </div>
+                            <!-- Insurance -->
+                            <div class="border rounded-lg p-4 flex justify-between items-center">
+                                <div>
+                                    <p class="font-semibold">Get Travel Insurance</p>
+                                </div>
+                                <button class="btn btn-outline btn-info">Get Insurance</button>
+                            </div>
+                            <!-- Buy Tickets -->
+                            <div class="border rounded-lg p-4 flex justify-between items-center">
+                                <div>
+                                    <p class="font-semibold">Check visa requirements</p>
+                                </div>
+                                <button class="btn btn-outline btn-error">Buy Tickets</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-        <div>
+    <!-- Footer -->
+    <footer class="bg-gray-100 py-10">
+        <div class="container mx-auto grid grid-cols-4 gap-8">
+            <!-- Brand -->
+            <div>
+                <h2 class="font-bold text-xl text-blue-600">Aitrav</h2>
+                <p class="text-gray-600 mt-4">Similarly, a loan taken out to buy a car may be secured by the car.</p>
+            </div>
 
+            <!-- Services -->
+            <div>
+                <h3 class="font-semibold mb-4">Services</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-700">Trip Planner</a></li>
+                    <li><a href="#" class="text-gray-700">Tour Planning</a></li>
+                    <li><a href="#" class="text-gray-700">Tour Guide</a></li>
+                    <li><a href="#" class="text-gray-700">Tour Package</a></li>
+                </ul>
+            </div>
 
-        </div>
+            <!-- Support -->
+            <div>
+                <h3 class="font-semibold mb-4">Support</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-700">Account</a></li>
+                    <li><a href="#" class="text-gray-700">Legal</a></li>
+                    <li><a href="#" class="text-gray-700">Contact</a></li>
+                    <li><a href="#" class="text-gray-700">Terms & Conditions</a></li>
+                </ul>
+            </div>
 
-
-    </div>
-
-
-
-
-
-
-
-
-
-
-</body>
+            <!-- Business -->
+            <div>
+                <h3 class="font-semibold mb-4">Business</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-700">Success</a></li>
+                    <li><a href="#" class="text-gray-700">Blog</a></li>
+                    <li><a
