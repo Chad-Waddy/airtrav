@@ -1,0 +1,12 @@
+.section-header {
+    display: flex;
+    align-items: center;
+  }
+  .section-header::after {
+    content: '\25BC';
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+  }
+  .section-header.collapsed::after {
+    transform: rotate(-90deg);
+  }

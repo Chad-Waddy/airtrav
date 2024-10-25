@@ -1,208 +1,324 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Aitrav - Trip Checklist</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.38.0/dist/full.css" rel="stylesheet">
-    <style>
-        /* Custom styling for progress bar */
-        .progress-bar {
-            width: 40%; /* Adjust based on progress */
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Airtrav Checklist
+  </title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <style>
+   body {
+            font-family: 'Inter', sans-serif;
         }
-    </style>
-</head>
-<body class="font-sans">
-
-    <!-- Navbar -->
-    <nav class="bg-white border-b border-gray-200 py-4 shadow-md">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="flex items-center space-x-4">
-                <span class="font-bold text-xl text-blue-600">Aitrav</span>
-                <div class="space-x-8">
-                    <a href="#" class="hover:text-blue-600">Things To Do</a>
-                    <a href="#" class="hover:text-blue-600">Tour</a>
-                    <a href="#" class="hover:text-blue-600">Blog</a>
-                </div>
-            </div>
-            <div class="flex space-x-6 items-center">
-                <a href="#" class="text-gray-700">USD</a>
-                <a href="#" class="text-gray-700">FAQ</a>
-                <a href="#" class="text-gray-700">Login</a>
-            </div>
-        </div>
-    </nav>
-    
-
-    <!-- Main Content -->
-    <div class="container mx-auto py-10">
-         <!-- Progress Bar -->
-         <div class="mb-4">
-            <div class="bg-gray-200 h-1 rounded-full">
-                <div class="bg-blue-600 h-1 rounded-full progress-bar"></div>
-            </div>
-            <p class="text-gray-600 mt-2 text-sm">40% completed</p>
-        </div>
-        <!-- Trip Checklist Sidebar + Checklist Main Content -->
-        <div class="grid grid-cols-5 gap-8">
-            <!-- Sidebar -->
-            <div class="col-span-1">
-                <div class="bg-gray-50 p-4 rounded-lg shadow">
-                    <h3 class="font-semibold text-lg">Trip Checklist</h3>
-                    <ul class="mt-4 space-y-2">
-                        <li><a href="#" class="text-blue-500">Travel (2)</a></li>
-                        <li><a href="#" class="text-gray-700">Tickets & Tours (2)</a></li>
-                        <li><a href="#" class="text-gray-700">Hotel (1)</a></li>
-                        <li><a href="#" class="text-gray-700">Plan Ahead (4)</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Main Checklist Content -->
-            <div class="col-span-4">
-                <div class="bg-white p-8 rounded-lg shadow">
-                    <!-- Progress Bar -->
-                    <div class="mb-4">
-                        <div class="bg-gray-200 h-1 rounded-full">
-                            <div class="bg-blue-600 h-1 rounded-full progress-bar"></div>
-                        </div>
-                        <p class="text-gray-600 mt-2 text-sm">40% completed</p>
-                    </div>
-
-                    <!-- Travel Section -->
-                    <div class="mb-6">
-                        <h3 class="font-semibold text-lg mb-2">Travel (2)</h3>
-                        <div class="grid grid-cols-2 gap-4">
-                            <!-- Trip Card 1 -->
-                            <div class="border rounded-lg p-4 flex justify-between items-center">
-                                <div>
-                                    <p class="font-semibold">Dhaka City</p>
-                                    <p class="text-gray-500">Bangkok</p>
-                                </div>
-                                <button class="btn btn-primary">Check Prices</button>
-                            </div>
-                            <!-- Trip Card 2 -->
-                            <div class="border rounded-lg p-4 flex justify-between items-center">
-                                <div>
-                                    <p class="font-semibold">Paris</p>
-                                    <p class="text-gray-500">Bangkok</p>
-                                </div>
-                                <button class="btn btn-primary">Check Prices</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Tickets & Tours Section -->
-                    <div class="mb-6">
-                        <h3 class="font-semibold text-lg mb-2">Tickets & Tours (2)</h3>
-                        <div class="grid grid-cols-2 gap-4">
-                            <!-- Tour Card 1 -->
-                            <div class="border rounded-lg p-4 flex justify-between items-center">
-                                <div>
-                                    <p class="font-semibold">Spas - Bangkok</p>
-                                    <p class="text-gray-500">Wed 12/13</p>
-                                </div>
-                                <button class="btn btn-secondary">Buy Tickets</button>
-                            </div>
-                            <!-- Tour Card 2 -->
-                            <div class="border rounded-lg p-4 flex justify-between items-center">
-                                <div>
-                                    <p class="font-semibold">Sea Life Bangkok</p>
-                                    <p class="text-gray-500">Wed 12/13</p>
-                                </div>
-                                <button class="btn btn-secondary">Buy Tickets</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Hotel Section -->
-                    <div class="mb-6">
-                        <h3 class="font-semibold text-lg mb-2">Hotel (1)</h3>
-                        <div class="border rounded-lg p-4 flex justify-between items-center">
-                            <div>
-                                <p class="font-semibold">Bangkok</p>
-                                <p class="text-gray-500">Tue 10/24 - Fri 10/31</p>
-                            </div>
-                            <button class="btn btn-primary">Check Prices</button>
-                        </div>
-                    </div>
-
-                    <!-- Plan Ahead Section -->
-                    <div class="mb-6">
-                        <h3 class="font-semibold text-lg mb-2">Plan Ahead (4)</h3>
-                        <div class="space-y-4">
-                            <!-- Visa Requirement 1 -->
-                            <div class="border rounded-lg p-4 flex justify-between items-center">
-                                <div>
-                                    <p class="font-semibold">Check visa requirements</p>
-                                </div>
-                                <button class="btn btn-outline btn-warning">Check Visa</button>
-                            </div>
-                            <!-- Visa Requirement 2 -->
-                            <div class="border rounded-lg p-4 flex justify-between items-center">
-                                <div>
-                                    <p class="font-semibold">Check visa requirements</p>
-                                </div>
-                                <button class="btn btn-outline btn-warning">Check Visa</button>
-                            </div>
-                            <!-- Insurance -->
-                            <div class="border rounded-lg p-4 flex justify-between items-center">
-                                <div>
-                                    <p class="font-semibold">Get Travel Insurance</p>
-                                </div>
-                                <button class="btn btn-outline btn-info">Get Insurance</button>
-                            </div>
-                            <!-- Buy Tickets -->
-                            <div class="border rounded-lg p-4 flex justify-between items-center">
-                                <div>
-                                    <p class="font-semibold">Check visa requirements</p>
-                                </div>
-                                <button class="btn btn-outline btn-error">Buy Tickets</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        .section-header {
+    display: flex;
+    align-items: center;
+  }
+  .section-header::after {
+    content: '\25BC';
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+  }
+  .section-header.collapsed::after {
+    transform: rotate(-90deg);
+  }
+  </style>
+ </head>
+ <body class="bg-gray-50 text-gray-800">
+  <!-- Header -->
+  <header class="bg-white shadow-md">
+   <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center">
+     <img alt="Airtrav logo" class="mr-2" height="40" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-LmQ09WWGIGwOeeA4ArnRw0x5/user-uJPET5fjNenSso8wCETWVNOp/img-CeP73ZWjZYDU674XjyY9T2Eh.png?st=2024-09-17T13%3A59%3A15Z&amp;se=2024-09-17T15%3A59%3A15Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-16T23%3A09%3A06Z&amp;ske=2024-09-17T23%3A09%3A06Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=iP79nPbTkkIVSFKnASGfyV/PrxXqjEr4UGzVEx1vGBs%3D" width="40"/>
+     <span class="text-xl font-semibold">
+      Airtrav
+     </span>
     </div>
+    <nav class="hidden md:flex space-x-6">
+     <a class="text-gray-600 hover:text-gray-800" href="#">
+      Things To Do
+     </a>
+     <a class="text-gray-600 hover:text-gray-800" href="#">
+      Tour
+     </a>
+     <a class="text-gray-600 hover:text-gray-800" href="#">
+      Blog
+     </a>
+    </nav>
+    <div class="hidden md:flex items-center space-x-4">
+     <span class="text-gray-600">
+      USD
+     </span>
+     <a class="text-gray-600 hover:text-gray-800" href="#">
+      FAQ
+     </a>
+     <a class="text-gray-600 hover:text-gray-800" href="#">
+      Log in
+     </a>
+     <img alt="User avatar" class="rounded-full w-10 h-10" height="40" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-LmQ09WWGIGwOeeA4ArnRw0x5/user-uJPET5fjNenSso8wCETWVNOp/img-k1Y5w0vx1Mh8YMQUtQWCAIgS.png?st=2024-09-17T13%3A59%3A13Z&amp;se=2024-09-17T15%3A59%3A13Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-16T23%3A00%3A30Z&amp;ske=2024-09-17T23%3A00%3A30Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=suQQIT2NKpZg5BlDeByCq6tR683kfei6WIWKeSTQCoA%3D" width="40"/>
+    </div>
+    <div class="md:hidden">
+     <button class="text-gray-600 focus:outline-none">
+      <i class="fas fa-bars">
+      </i>
+     </button>
+    </div>
+   </div>
+  </header>
+  <body>
+ 
 
-    <!-- Footer -->
-    <footer class="bg-gray-100 py-10">
-        <div class="container mx-auto grid grid-cols-4 gap-8">
-            <!-- Brand -->
-            <div>
-                <h2 class="font-bold text-xl text-blue-600">Aitrav</h2>
-                <p class="text-gray-600 mt-4">Similarly, a loan taken out to buy a car may be secured by the car.</p>
-            </div>
-
-            <!-- Services -->
-            <div>
-                <h3 class="font-semibold mb-4">Services</h3>
-                <ul class="space-y-2">
-                    <li><a href="#" class="text-gray-700">Trip Planner</a></li>
-                    <li><a href="#" class="text-gray-700">Tour Planning</a></li>
-                    <li><a href="#" class="text-gray-700">Tour Guide</a></li>
-                    <li><a href="#" class="text-gray-700">Tour Package</a></li>
-                </ul>
-            </div>
-
-            <!-- Support -->
-            <div>
-                <h3 class="font-semibold mb-4">Support</h3>
-                <ul class="space-y-2">
-                    <li><a href="#" class="text-gray-700">Account</a></li>
-                    <li><a href="#" class="text-gray-700">Legal</a></li>
-                    <li><a href="#" class="text-gray-700">Contact</a></li>
-                    <li><a href="#" class="text-gray-700">Terms & Conditions</a></li>
-                </ul>
-            </div>
-
-            <!-- Business -->
-            <div>
-                <h3 class="font-semibold mb-4">Business</h3>
-                <ul class="space-y-2">
-                    <li><a href="#" class="text-gray-700">Success</a></li>
-                    <li><a href="#" class="text-gray-700">Blog</a></li>
-                    <li><a
+  <!-- Main Content -->
+  <main class="container mx-auto px-4 py-8">
+   <div class="flex justify-center mb-8">
+    <div class="flex space-x-4">
+     <button class="bg-blue-500 text-white px-4 py-2 rounded-lg">
+      Route
+     </button>
+     <button class="bg-blue-500 text-white px-4 py-2 rounded-lg">
+      Day by day
+     </button>
+     <button class="bg-blue-500 text-white px-4 py-2 rounded-lg">
+      Where to stay
+     </button>
+     <button class="bg-blue-500 text-white px-4 py-2 rounded-lg">
+      Checklist
+     </button>
+    </div>
+   </div>
+   <div class="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8">
+    <!-- Sidebar -->
+    <aside class="w-full md:w-1/4 bg-white shadow-md rounded-lg p-4 sticky top-8">
+     <h2 class="text-lg font-semibold mb-4">
+      Trip checklist
+     </h2>
+     <ul class="space-y-2">
+      <li class="flex justify-between items-center">
+       <div class="flex items-center space-x-2">
+        <i class="fas fa-plane text-orange-500">
+        </i>
+        <span>
+         Travel
+        </span>
+       </div>
+       <span class="text-gray-500">
+        (2)
+       </span>
+      </li>
+      <li class="flex justify-between items-center">
+       <div class="flex items-center space-x-2">
+        <i class="fas fa-ticket-alt text-green-500">
+        </i>
+        <span>
+         Tickets &amp; Tours
+        </span>
+       </div>
+       <span class="text-gray-500">
+        (2)
+       </span>
+      </li>
+      <li class="flex justify-between items-center">
+       <div class="flex items-center space-x-2">
+        <i class="fas fa-hotel text-blue-500">
+        </i>
+        <span>
+         Hotel
+        </span>
+       </div>
+       <span class="text-gray-500">
+        (1)
+       </span>
+      </li>
+      <li class="flex justify-between items-center">
+       <div class="flex items-center space-x-2">
+        <i class="fas fa-calendar-alt text-purple-500">
+        </i>
+        <span>
+         Plan Ahead
+        </span>
+       </div>
+       <span class="text-gray-500">
+        (4)
+       </span>
+      </li>
+     </ul>
+    </aside>
+    <!-- Checklist Content -->
+    <section class="w-full md:w-3/4 bg-white shadow-md rounded-lg p-6">
+     <div class="flex justify-between items-center mb-4">
+      <h2 class="text-lg font-semibold">
+       Check list
+      </h2>
+      <div class="flex space-x-2">
+       <button class="bg-blue-500 text-white px-4 py-2 rounded-lg" id="addF" >
+            <a href="put the link here "></a>
+        + Add
+       </button>
+       <button class="bg-gray-200 text-gray-600 px-4 py-2 rounded-lg">
+        <i class="fas fa-ellipsis-h">
+        </i>
+       </button>
+      </div>
+     </div>
+     <div class="mb-4">
+      <div class="bg-gray-200 rounded-full h-2">
+       <div class="bg-blue-500 h-2 rounded-full" style="width: 40%;">
+       </div>
+      </div>
+      <div class="text-right text-sm text-gray-600">
+       40%
+      </div>
+     </div>
+     <!-- Travel Section -->
+     <div class="mb-6" id="travel-section">
+      <h3 class="text-orange-500 font-semibold mb-2" id="Travel">
+       Travel (2)
+      </h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 section-content">
+       <div class="bg-gray-100 p-4 rounded-lg flex justify-between items-center">
+        <div class="flex flex-col md:flex-row md:items-center md:space-x-4">
+         <div>
+          <p class="font-semibold">
+           Dhaka City
+          </p>
+          <p class="text-gray-500">
+           Bangkok
+          </p>
+         </div>
+         <button class="bg-blue-500 text-white px-4 py-2 rounded-lg mt-2 md:mt-0">
+          Check prices
+         </button>
+        </div>
+       </div>
+       <div class="bg-gray-100 p-4 rounded-lg flex justify-between items-center">
+        <div class="flex flex-col md:flex-row md:items-center md:space-x-4">
+         <div>
+          <p class="font-semibold">
+           Paris
+          </p>
+          <p class="text-gray-500">
+           Bangkok
+          </p>
+         </div>
+         <button class="bg-blue-500 text-white px-4 py-2 rounded-lg mt-2 md:mt-0">
+          Check prices
+         </button>
+        </div>
+       </div>
+      </div>
+     </div>
+     <!-- Tickets & Tours Section -->
+     <div class="mb-6" id="tickets-section">
+      <h3 class="text-green-500 font-semibold mb-2 section-header cursor-pointer">
+       Tickets &amp; Tours (2)
+      </h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+       <div class="bg-gray-100 p-4 rounded-lg">
+        <img alt="Spas - Bangkok" class="rounded-lg mb-2" height="100" src="bangkokpic.jpg" width="150"/>
+        <p class="font-semibold">
+         Spas - Bangkok
+        </p>
+        <button class="bg-blue-500 text-white px-4 py-2 rounded-lg mt-2">
+         Buy tickets
+        </button>
+       </div>
+       <div class="bg-gray-100 p-4 rounded-lg">
+        <img alt="Sea Life Bangkok" class="rounded-lg mb-2" height="100" src="bangsea.jpg" width="150"/>
+        <p class="font-semibold">
+         Sea Life Bangkok
+        </p>
+        <button class="bg-blue-500 text-white px-4 py-2 rounded-lg mt-2">
+         Buy tickets
+        </button>
+       </div>
+      </div>
+     </div>
+     <!-- Hotel Section -->
+     <div class="mb-6">
+      <h3 class="text-blue-500 font-semibold mb-2">
+       Hotel (1)
+      </h3>
+      <div class="bg-gray-100 p-4 rounded-lg flex justify-between items-center">
+       <div>
+        <p class="font-semibold">
+         Bangkok
+        </p>
+        <p class="text-gray-500">
+         Tue 10/24 - Fri 10/27
+        </p>
+       </div>
+       <button class="bg-blue-500 text-white px-4 py-2 rounded-lg">
+        Check prices
+       </button>
+      </div>
+     </div>
+     <!-- Plan Ahead Section -->
+     <div>
+      <h3 class="text-purple-500 font-semibold mb-2">
+       Plan Ahead (4)
+      </h3>
+      <div class="space-y-4">
+       <div class="bg-gray-100 p-4 rounded-lg flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+         <i class="fas fa-passport text-orange-500">
+         </i>
+         <p>
+          Check visa requirements
+         </p>
+        </div>
+        <button class="bg-white border border-orange-500 text-orange-500 px-4 py-2 rounded-lg">
+         Check visa
+        </button>
+       </div>
+       <div class="bg-gray-100 p-4 rounded-lg flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+         <i class="fas fa-passport text-green-500">
+         </i>
+         <p>
+          Check visa requirements
+         </p>
+        </div>
+        <button class="bg-white border border-green-500 text-green-500 px-4 py-2 rounded-lg">
+         Check visa
+        </button>
+       </div>
+       <div class="bg-gray-100 p-4 rounded-lg flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+         <i class="fas fa-passport text-blue-500">
+         </i>
+         <p>
+          Check visa requirements
+         </p>
+        </div>
+        <button class="bg-white border border-blue-500 text-blue-500 px-4 py-2 rounded-lg">
+         Get Insurance
+        </button>
+       </div>
+       <div class="bg-gray-100 p-4 rounded-lg flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+         <img alt="Visa requirements" class="rounded-lg" height="40" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-LmQ09WWGIGwOeeA4ArnRw0x5/user-uJPET5fjNenSso8wCETWVNOp/img-eTtGiz9SNOPYd1bZ58NI6LS3.png?st=2024-09-17T13%3A59%3A19Z&amp;se=2024-09-17T15%3A59%3A19Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-17T04%3A35%3A44Z&amp;ske=2024-09-18T04%3A35%3A44Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=pAJgsUb%2BT5GXoZcJ0JwfA%2B9iyyhorOLDVqtlEo1jj2o%3D" width="40"/>
+         <p>
+          Check visa requirements
+         </p>
+        </div>
+        <button class="bg-white border border-red-500 text-red-500 px-4 py-2 rounded-lg">
+         Buy tickets
+        </button>
+       </div>
+      </div>
+     </div>
+    </section>
+   </div>
+  </main>
+  <!-- Footer -->
+  <footer class="bg-white shadow-md mt-8">
+   <div class="container mx-auto px-4 py-8">
+    <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+     <div class="flex items-center space-x-4 mb-4 md:mb-0">
+      <img alt="Airtrav logo" height="40" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-LmQ09WWGIGwOeeA
+</body>
